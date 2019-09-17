@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="726.0" prefWidth="975.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="representacao_grafos.FXMLDocumentController">
+   <children>
+      <Pane layoutX="14.0" layoutY="64.0" prefHeight="354.0" prefWidth="541.0" style="-fx-background-color: #F5F5F5;">
+         <children>
+            <Canvas fx:id="telaCanvas" height="354.0" onMouseClicked="#evtCriaVertice" width="541.0" />
+         </children>
+      </Pane>
+      <Label fx:id="labelMA" layoutX="570.0" layoutY="47.0" text="MA - Matriz de Adjacencia">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMI" layoutX="570.0" layoutY="334.0" text="MI - Matriz de Incidencia">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="matrizAdj" layoutX="570.0" layoutY="64.0" prefHeight="270.0" prefWidth="387.0">
+         <columns>
+            <TableColumn fx:id="LinhaP" prefWidth="48.0" text="X" />
+            <TableColumn fx:id="col1" maxWidth="33.0" prefWidth="75.0" text="1" visible="false" />
+            <TableColumn fx:id="col2" maxWidth="33.0" prefWidth="75.0" text="2" visible="false" />
+            <TableColumn fx:id="col3" maxWidth="33.0" prefWidth="75.0" text="3" visible="false" />
+            <TableColumn fx:id="col4" maxWidth="33.0" prefWidth="75.0" text="4" visible="false" />
+            <TableColumn fx:id="col5" maxWidth="33.0" prefWidth="75.0" text="5" visible="false" />
+            <TableColumn fx:id="col6" maxWidth="33.0" prefWidth="75.0" text="6" visible="false" />
+            <TableColumn fx:id="col7" maxWidth="33.0" prefWidth="75.0" text="7" visible="false" />
+            <TableColumn fx:id="col8" maxWidth="33.0" prefWidth="75.0" text="8" visible="false" />
+            <TableColumn fx:id="col9" maxWidth="33.0" prefWidth="75.0" text="9" visible="false" />
+            <TableColumn fx:id="col10" maxWidth="33.0" prefWidth="75.0" text="10" visible="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="matrizInc" layoutX="570.0" layoutY="351.0" prefHeight="354.0" prefWidth="387.0">
+         <columns>
+            <TableColumn fx:id="LinhaP2" prefWidth="48.0" text="X" />
+            <TableColumn fx:id="Lcol1" maxWidth="33.0" prefWidth="75.0" text="1" visible="false" />
+            <TableColumn fx:id="Lcol2" maxWidth="33.0" prefWidth="75.0" text="2" visible="false" />
+            <TableColumn fx:id="Lcol3" maxWidth="33.0" prefWidth="75.0" text="3" visible="false" />
+            <TableColumn fx:id="Lcol4" maxWidth="33.0" prefWidth="75.0" text="4" visible="false" />
+            <TableColumn fx:id="Lcol5" maxWidth="33.0" prefWidth="75.0" text="5" visible="false" />
+            <TableColumn fx:id="Lcol6" maxWidth="33.0" prefWidth="75.0" text="6" visible="false" />
+            <TableColumn fx:id="Lcol7" maxWidth="33.0" prefWidth="75.0" text="7" visible="false" />
+            <TableColumn fx:id="Lcol8" maxWidth="33.0" prefWidth="75.0" text="8" visible="false" />
+            <TableColumn fx:id="Lcol9" maxWidth="33.0" prefWidth="75.0" text="9" visible="false" />
+            <TableColumn fx:id="Lcol10" maxWidth="33.0" prefWidth="75.0" text="10" visible="false" />
+         </columns></TableView>
+      <TableView fx:id="ListaAdjacente" layoutX="14.0" layoutY="435.0" prefHeight="270.0" prefWidth="541.0">
+         <columns>
+            <TableColumn fx:id="LinhaP3" prefWidth="60.0" text="X" />
+            <TableColumn fx:id="MIcol1" maxWidth="43.0" minWidth="48.0" prefWidth="50.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol2" maxWidth="33.0" minWidth="48.0" prefWidth="50.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol3" maxWidth="33.0" minWidth="48.0" prefWidth="75.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol4" maxWidth="47.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol5" maxWidth="56.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol6" maxWidth="81.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol7" maxWidth="105.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol8" maxWidth="148.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol9" maxWidth="150.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+            <TableColumn fx:id="MIcol10" maxWidth="173.0" minWidth="48.0" prefWidth="48.0" text="-" visible="false" />
+         </columns>
+      </TableView>
+      <RadioButton fx:id="btLigVal" layoutX="100.0" layoutY="30.0" mnemonicParsing="false" text="Ligação Valorada" />
+      <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#btClassificar" prefHeight="32.0" prefWidth="69.0" text="Classificar" />
+      <Label fx:id="Resposta" layoutX="467.0" layoutY="20.0" prefHeight="27.0" prefWidth="440.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="btGrafo" layoutX="100.0" layoutY="8.0" mnemonicParsing="false" onAction="#btGrafos" text="Grafo" />
+      <RadioButton fx:id="btDigrafo" layoutX="156.0" layoutY="8.0" mnemonicParsing="false" onAction="#btDigrafos" text="Digrafo" />
+      <Button fx:id="btPintar" alignment="CENTER_RIGHT" layoutX="223.0" layoutY="18.0" mnemonicParsing="false" onAction="#btPintarAct" prefHeight="32.0" prefWidth="78.0" style="-fx-background-image: url('pincel.png'); -fx-background-repeat: no-repeat;" text="Pintar" />
+      <Button fx:id="btPontoArt" layoutX="321.0" layoutY="19.0" mnemonicParsing="false" onAction="#btPontoAct" prefHeight="32.0" prefWidth="132.0" text="Ponto de articulação" />
+   </children>
+</AnchorPane>

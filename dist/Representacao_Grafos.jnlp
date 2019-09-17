@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Representacao_Grafos.jnlp">
+  <information>
+    <title>Representacao_Grafos</title>
+    <vendor>Aluno</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Representacao_Grafos.jar" size="19280" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Representacao_Grafos" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="representacao_grafos.Representacao_Grafos"  name="Representacao_Grafos" />
+  <update check="always"/>
+</jnlp>
